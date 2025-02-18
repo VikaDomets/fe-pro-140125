@@ -6,18 +6,14 @@
 let firstNumber = Number(prompt('Впишіть перше довільне число:'));
 let secondNumber = Number(prompt('Впишіть друге довільне число:'));
 let thirdNumber = Number(prompt('Впишіть третє довільне число:'));
-let maxNumber = '';
 if(firstNumber>secondNumber && firstNumber>thirdNumber){
     console.log(`Найбільше число серед чисел ${firstNumber}`);
 }
-else if(secondNumber>firstNumber && secondNumber>thirdNumber){
+else if(secondNumber>=firstNumber && secondNumber>=thirdNumber){
     console.log(`Найбільше число серед чисел ${secondNumber}`);
 }
-else if(thirdNumber>firstNumber && thirdNumber>secondNumber){
-    console.log(`Найбільше число серед чисел ${thirdNumber}`);
-}
 else{
-    console.log(`Серед навединих чисел немає найбільшого числа`);
+    console.log(`Найбільше число серед чисел ${thirdNumber}`);
 }
 
 // 2) Визначення сезону:
