@@ -45,7 +45,7 @@ let fnResult = function (a, b, operation) {
             return 'Error';
     }
 }
-console.log(fnResult(a, b, operation));
+fnResult(a, b, operation);
 
 // 2 Параметри та колбеки:
 // Створіть функцію wellcomUser, яка приймає масив і функцію-колбек hiUser яка виводить в console ('Вітаю ${user}'), 
