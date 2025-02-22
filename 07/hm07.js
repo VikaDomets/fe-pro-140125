@@ -25,10 +25,6 @@ function game(choiceUser, choiceComp) {
 }
 game(lowerJs, ComputerChoice());
 
-// let choiceUser = prompt('Виберіть: камінь, ножиці, папір');
-// let choiceComp = Math.random('камінь', 'ножиці', 'папір');
-// let result = '';
-// console.log(choiceComp);
 // Напишіть функцію, яка перевіряє тип змінної та виводить повідомлення "Це число", "Це рядок" або "Це інший тип", використовуючи оператор typeof.
 
 console.log('=====')
