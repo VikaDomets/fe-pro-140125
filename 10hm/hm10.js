@@ -72,8 +72,8 @@ function formDate(date){
     console.log(date);
     return date.toLocaleString('uk-UA', options);
 }
-let data = [];
-console.log(window.localStorage.list);
+
+
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
