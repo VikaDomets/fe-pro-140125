@@ -73,8 +73,6 @@ function formDate(date){
     return date.toLocaleString('uk-UA', options);
 }
 
-
-
 form.addEventListener('submit', function(event){
     event.preventDefault();
     todoInput.classList.remove('is-invalid');
