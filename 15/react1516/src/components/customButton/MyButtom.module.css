@@ -1,0 +1,9 @@
+.custom{
+    background-color: blueviolet;
+    color: yellow;
+    padding: 30px 60px;
+}
+.custom:hover{
+    background-color: black;
+    color: white;
+}

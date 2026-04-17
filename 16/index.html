@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея мистецтва</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 20px; background-color: #f5f5f5; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: auto; }
+        .card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer; }
+        .card img { width: 100%; border-radius: 10px; }
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; }
+        .overlay-content { background: white; padding: 20px; border-radius: 10px; text-align: center; }
+        .close-btn { margin-top: 10px; padding: 5px 10px; border: none; background: #333; color: white; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Галерея мистецтва</h1>
+    <p>Ознайомтесь із найкращими художніми творами сучасних митців.</p>
+    <div class="gallery">
+        <div class="card" onclick="openOverlay('Магія кольорів', 'Олександр Левченко', 'https://via.placeholder.com/300')">
+            <img src="https://via.placeholder.com/300" alt="Магія кольорів">
+            <h2>Магія кольорів</h2>
+            <p>Олександр Левченко</p>
+        </div>
+        <div class="card" onclick="openOverlay('Тінь у вікні', 'Анна Марченко', 'https://via.placeholder.com/300')">
+            <img src="https://via.placeholder.com/300" alt="Тінь у вікні">
+            <h2>Тінь у вікні</h2>
+            <p>Анна Марченко</p>
+        </div>
+        <div class="card" onclick="openOverlay('Відлуння часу', 'Ігор Петров', 'https://via.placeholder.com/300')">
+            <img src="https://via.placeholder.com/300" alt="Відлуння часу">
+            <h2>Відлуння часу</h2>
+            <p>Ігор Петров</p>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="closeOverlay()">
+        <div class="overlay-content">
+            <h2 id="overlay-title"></h2>
+            <p id="overlay-artist"></p>
+            <img id="overlay-image" src="" alt="" style="width:100%; max-width:400px; border-radius: 10px;">
+            <button class="close-btn" onclick="closeOverlay()">Закрити</button>
+        </div>
+    </div>
+    
+    <script>
+        function openOverlay(title, artist, image) {
+            document.getElementById('overlay-title').innerText = title;
+            document.getElementById('overlay-artist').innerText = artist;
+            document.getElementById('overlay-image').src = image;
+            document.getElementById('overlay').style.display = 'flex';
+        }
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
